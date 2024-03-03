@@ -3,7 +3,7 @@ public class MergeTwoLists {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
 
-        while (l1 != null && l1 != null) {
+        while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
                 curr.next = l1;
                 l1 = l1.next;
@@ -22,5 +22,14 @@ public class MergeTwoLists {
             l2 = l2.next;
         }
         return dummy.next;
+    }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    public ListNode(int val) {
+        this.val = val;
     }
 }
